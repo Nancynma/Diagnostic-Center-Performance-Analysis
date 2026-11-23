@@ -1,19 +1,22 @@
- *Diagnostic Centre Operational Performance Analysis.
+# Diagnostic Centre Operational Performance Analysis
 
-*Project Overview:
+## Project Overview
+
 This project examines the operational performance of a diagnostic centre using data analysis. It focuses on patient visits, laboratory test turnaround time, test charges and payment patterns.
+
 The aim is to understand what the data reveals about the centre's operations, identify areas that may require attention and provide practical recommendations to support better decision-making.
 
-*Project Objective:
+## Project Objective
 
 To analyse diagnostic centre operations, assess laboratory turnaround time, examine test charges and payment patterns, and identify opportunities for operational improvement.
 
-*Tools Used:
-PostgreSQL (Neon): Data exploration, querying, data cleaning checks and analysis.
-Microsoft Excel: KPI reporting, data summaries and visualisation.
-Microsoft Power BI: Interactive dashboards and performance reporting.
+## Tools Used
 
-*Dataset Overview:
+- **PostgreSQL (Neon):** Data exploration, querying, data quality checks and analysis.
+- **Microsoft Excel:** KPI reporting, data summaries and visualisation.
+- **Microsoft Power BI:** Interactive dashboards and performance reporting.
+
+## Dataset Overview
 
 The project uses a synthetic dataset containing four related tables:
 
@@ -24,9 +27,9 @@ The project uses a synthetic dataset containing four related tables:
 | Laboratory Tests | 2,000 |
 | Payments | 2,000 |
 
-Note: The dataset is simulated for learning and portfolio demonstration. It does not represent actual patient records or the operations of a real diagnostic centre.
+**Data note:** The dataset is simulated for learning and portfolio demonstration. It does not contain real patient information or represent the actual operations of a diagnostic centre.
 
-*Key Findings:
+## Key Findings
 
 - A total of 1,000 patients and 1,500 visits were recorded.
 - Laboratory tests had a 92% completion rate, 5% pending rate and 3% cancellation rate.
@@ -35,27 +38,35 @@ Note: The dataset is simulated for learning and portfolio demonstration. It does
 - Payment records showed 60% paid, 20% partially paid and 20% unpaid.
 - Each of the five departments recorded 300 visits.
 
-*How I Think as an Analyst:
+## How I Think as an Analyst
 
-The analysis also considered the limitations of the available data. For example, payment status alone cannot establish the actual amount collected or outstanding. Similarly, equal visit counts across departments should not be interpreted as proof of equal demand in real diagnostic centres because the dataset is synthetic.
+Good data analysis is not just about finding numbers. It is also about understanding what those numbers can and cannot tell us.
 
-*Recommendations:
+For example, 20% of payment records were marked as unpaid. However, the dataset did not contain actual amounts paid or outstanding balances. Therefore, I could identify the percentage of unpaid records but could not calculate the actual amount owed.
 
-Based on the findings, the project recommends:
+I also observed that all five departments recorded exactly 300 visits. Since the dataset is synthetic, I would not conclude that all departments have equal patient demand in a real diagnostic centre.
 
-1. Investigating reasons for pending and cancelled laboratory tests.
-2. Reviewing workflows for tests with longer turnaround times.
-3. Improving payment records to capture actual amounts paid and outstanding balances.
-4. Validating department activity using real operational records.
-5. Establishing regular monitoring of operational performance indicators.
+These observations demonstrate the importance of understanding data limitations before making conclusions or recommendations.
 
-*Project Limitations:
+## From Findings to Next Action
+
+Based on my analysis, I identified the following areas that deserve further attention:
+
+- **Pending and cancelled tests:** Investigate why 5% of tests were pending and 3% were cancelled.
+- **Laboratory turnaround time:** Review the processes involved in KFT and FBC tests to understand their longer average turnaround times.
+- **Payment records:** Capture actual amounts paid and outstanding balances to monitor collections accurately.
+- **Department activity:** Compare department visit figures with real operational records before making staffing decisions.
+- **Performance monitoring:** Regularly review patient visits, test completion, turnaround time, cancellations and payment patterns.
+
+My overall recommendation is to strengthen operational record-keeping and establish regular performance monitoring to support better management decisions.
+
+## Project Limitations
 
 - The dataset is synthetic and may not reflect real-world operational patterns.
 - Actual amounts collected and outstanding balances could not be calculated.
-- The reasons behind pending and cancelled tests were not provided.
-- Further operational information would be needed to investigate the causes of turnaround time differences.
+- Reasons for pending and cancelled tests were not provided.
+- Additional operational information would be required to investigate the causes of turnaround time differences.
 
- *Project Outcome:
+## Project Outcome
 
-This project demonstrates how SQL, Excel and Power BI can be used together to explore operational data, communicate findings and develop recommendations that support informed decision-making.
+This project demonstrates how PostgreSQL, Microsoft Excel and Power BI can be used together to explore operational data, communicate findings and develop practical recommendations to support informed decision-making.
